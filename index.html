@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soulless - Подбор комплектующих для ПК</title>
     <style>
-        :root {
+         :root {
             --space-black: #0a0a12;
             --space-dark: #1a1a2e;
             --cosmic-orange: #ff5722;
@@ -25,9 +26,7 @@
         body {
             background-color: var(--space-black);
             color: var(--star-white);
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(255, 87, 34, 0.1) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(74, 20, 140, 0.1) 0%, transparent 20%);
+            background-image: radial-gradient(circle at 10% 20%, rgba(255, 87, 34, 0.1) 0%, transparent 20%), radial-gradient(circle at 90% 80%, rgba(74, 20, 140, 0.1) 0%, transparent 20%);
             min-height: 100vh;
         }
         
@@ -96,7 +95,8 @@
             position: relative;
         }
         
-        nav a:hover, nav a.active {
+        nav a:hover,
+        nav a.active {
             background-color: var(--cosmic-orange);
             color: var(--space-black);
             box-shadow: 0 0 10px var(--cosmic-glow);
@@ -114,7 +114,8 @@
             transform: translateX(-50%);
         }
         
-        nav a:hover::after, nav a.active::after {
+        nav a:hover::after,
+        nav a.active::after {
             width: 80%;
         }
         
@@ -180,7 +181,9 @@
             }
         }
         
-        .components-section, .build-section, .compare-section {
+        .components-section,
+        .build-section,
+        .compare-section {
             padding: 60px 0;
         }
         
@@ -223,7 +226,8 @@
             transition: all 0.3s ease;
         }
         
-        .category-tab:hover, .category-tab.active {
+        .category-tab:hover,
+        .category-tab.active {
             background-color: var(--cosmic-orange);
             color: var(--space-black);
             box-shadow: 0 0 15px var(--cosmic-glow);
@@ -493,7 +497,8 @@
             margin-top: 30px;
         }
         
-        .compare-table th, .compare-table td {
+        .compare-table th,
+        .compare-table td {
             padding: 15px;
             text-align: left;
             border-bottom: 1px solid rgba(255, 87, 34, 0.2);
@@ -593,8 +598,8 @@
             border-top: 1px solid rgba(255, 87, 34, 0.2);
             color: #b0b0b0;
         }
-
         /* Новые стили для улучшений */
+        
         .quick-tips {
             background: rgba(255, 87, 34, 0.1);
             border: 1px solid var(--cosmic-orange);
@@ -603,12 +608,12 @@
             margin: 20px 0;
             text-align: center;
         }
-
+        
         .quick-tips h3 {
             color: var(--cosmic-orange);
             margin-bottom: 10px;
         }
-
+        
         .progress-indicator {
             display: flex;
             justify-content: space-between;
@@ -617,7 +622,7 @@
             background: rgba(255, 87, 34, 0.05);
             border-radius: 10px;
         }
-
+        
         .progress-step {
             text-align: center;
             flex: 1;
@@ -625,18 +630,18 @@
             opacity: 0.5;
             transition: all 0.3s ease;
         }
-
+        
         .progress-step.active {
             opacity: 1;
             color: var(--cosmic-orange);
             font-weight: bold;
         }
-
+        
         .progress-step.completed::before {
             content: "✓ ";
             color: #4CAF50;
         }
-
+        
         .floating-tooltip {
             position: fixed;
             bottom: 20px;
@@ -645,27 +650,33 @@
             color: var(--space-black);
             padding: 15px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             z-index: 1000;
             max-width: 300px;
             transform: translateX(400px);
             transition: transform 0.5s ease;
         }
-
+        
         .floating-tooltip.show {
             transform: translateX(0);
         }
-
+        
         .pulse {
             animation: pulse 2s infinite;
         }
-
+        
         @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
         }
-
+        
         .loading-spinner {
             display: inline-block;
             width: 20px;
@@ -675,47 +686,43 @@
             border-top-color: transparent;
             animation: spin 1s ease-in-out infinite;
         }
-
+        
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
-
+        
         .success-checkmark {
             color: #4CAF50;
             font-size: 1.5rem;
             margin-right: 10px;
         }
-
+        
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
                 gap: 20px;
             }
-            
             nav ul {
                 flex-wrap: wrap;
                 justify-content: center;
             }
-            
             .hero h1 {
                 font-size: 2.2rem;
             }
-            
             .components-grid {
                 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             }
-            
             .build-container {
                 flex-direction: column;
             }
-
             .floating-tooltip {
                 bottom: 10px;
                 right: 10px;
                 left: 10px;
                 max-width: none;
             }
-
             .progress-indicator {
                 flex-direction: column;
                 gap: 10px;
@@ -723,6 +730,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -733,17 +741,17 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="#" class="active">Главная</a></li>
-                        <li><a href="#components">Комплектующие</a></li>
-                        <li><a href="#build">Моя сборка</a></li>
-                        <li><a href="#compare">Сравнение</a></li>
+                        <li><a href="#hero" class="nav-link active" data-section="hero">Главная</a></li>
+                        <li><a href="#components" class="nav-link" data-section="components">Комплектующие</a></li>
+                        <li><a href="#build" class="nav-link" data-section="build">Моя сборка</a></li>
+                        <li><a href="#compare" class="nav-link" data-section="compare">Сравнение</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <section class="hero">
+    <section id="hero" class="hero">
         <div class="container">
             <h1>Собери свой идеальный ПК</h1>
             <p>Интеллектуальный подбор комплектующих с проверкой совместимости и сравнением характеристик. Создайте мощную систему для игр, работы или творчества.</p>
@@ -754,7 +762,7 @@
     <section id="components" class="components-section">
         <div class="container">
             <h2 class="section-title">Комплектующие</h2>
-            
+
             <!-- Индикатор прогресса -->
             <div class="progress-indicator" id="progress-indicator">
                 <div class="progress-step" id="step-cpu">1. Процессор</div>
@@ -769,7 +777,7 @@
                 <h3>💡 Советы по сборке</h3>
                 <p id="quick-tip-text">Начните с выбора процессора - это основа вашей системы!</p>
             </div>
-            
+
             <div class="category-tabs">
                 <div class="category-tab active" data-category="all">Все</div>
                 <div class="category-tab" data-category="cpu">Процессоры</div>
@@ -781,7 +789,7 @@
                 <div class="category-tab" data-category="case">Корпуса</div>
                 <div class="category-tab" data-category="psu">Блоки питания</div>
             </div>
-            
+
             <div class="components-grid" id="components-container">
                 <!-- Компоненты будут загружены через JavaScript -->
             </div>
@@ -791,7 +799,7 @@
     <section id="build" class="build-section">
         <div class="container">
             <h2 class="section-title">Моя сборка</h2>
-            
+
             <div class="build-container">
                 <div class="build-list" id="build-list">
                     <div class="empty-build-message">
@@ -801,30 +809,30 @@
                         </p>
                     </div>
                 </div>
-                
+
                 <div class="build-summary">
                     <h3 class="summary-title">Сводка сборки</h3>
-                    
+
                     <div class="summary-item">
                         <span>Стоимость комплектующих:</span>
                         <span id="components-cost">0 ₽</span>
                     </div>
-                    
+
                     <div class="summary-item">
                         <span>Стоимость доставки:</span>
                         <span>0 ₽</span>
                     </div>
-                    
+
                     <div class="summary-item">
                         <span>Скидка:</span>
                         <span>0 ₽</span>
                     </div>
-                    
+
                     <div class="summary-total">
                         <span>Итого:</span>
                         <span id="total-cost">0 ₽</span>
                     </div>
-                    
+
                     <div class="compatibility-check">
                         <div class="compatibility-status">
                             <div class="status-icon">⚠️</div>
@@ -834,7 +842,7 @@
                             Добавьте компоненты для проверки совместимости
                         </div>
                     </div>
-                    
+
                     <button class="btn btn-primary" style="width: 100%; margin-top: 20px;" id="save-build-btn">
                         <span id="save-btn-text">Сохранить сборку</span>
                     </button>
@@ -846,13 +854,13 @@
     <section id="compare" class="compare-section">
         <div class="container">
             <h2 class="section-title">Сравнение комплектующих</h2>
-            
+
             <div class="selected-for-compare" id="compare-list">
                 <!-- Выбранные для сравнения компоненты -->
             </div>
-            
+
             <button class="btn btn-primary" id="compare-btn" style="display: none;">Сравнить выбранные</button>
-            
+
             <div id="compare-results">
                 <!-- Результаты сравнения будут здесь -->
             </div>
@@ -866,7 +874,7 @@
                     <h3 class="footer-title">Soulless</h3>
                     <p>Сервис для подбора и сравнения комплектующих ПК с проверкой совместимости.</p>
                 </div>
-                
+
                 <div class="footer-column">
                     <h3 class="footer-title">Помощь</h3>
                     <ul class="footer-links">
@@ -876,7 +884,7 @@
                         <li><a href="#">Контакты</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-column">
                     <h3 class="footer-title">Контакты</h3>
                     <ul class="footer-links">
@@ -884,9 +892,9 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="copyright">
-                &copy; 2023 Soulless. Все права защищены.
+                &copy; 2025 Soulless. Все права защищены.
             </div>
         </div>
     </footer>
@@ -900,83 +908,479 @@
     <script>
         // БАЗА ДАННЫХ ИЗ ВАШЕГО КОДА
         const componentsDB = {
-            cpu: [
-                { id: 1, name: "AMD Ryzen 9 7950X", specs: "16 ядер, 32 потока, 4.5-5.7 ГГц", price: 59990, socket: "AM5", tdp: 170, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSty7tuxzJewmcSUEOPOgBV4TmLPbzih0LPUA&s" },
-                { id: 2, name: "Intel Core i9-13900K", specs: "24 ядра, 32 потока, 3.0-5.8 ГГц", price: 54990, socket: "LGA 1700", tdp: 125, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJcn7eb1JPl9sW87Y3v3vagbdnJYUD509hnw&s" },
-                { id: 3, name: "AMD Ryzen 7 7700X", specs: "8 ядер, 16 потоков, 4.5-5.4 ГГц", price: 32990, socket: "AM5", tdp: 105, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv3wRnybrMB7biw74LlrxmLzprx5LUeqnkHQ&s" },
-                { id: 4, name: "Intel Core i7-13700K", specs: "16 ядер, 24 потока, 3.4-5.4 ГГц", price: 38990, socket: "LGA 1700", tdp: 125, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrNza2wQWq14AF_YAtB3UtypEO7ziTk-n1EQ&s" },
-                { id: 5, name: "AMD Ryzen 5 7600X", specs: "6 ядер, 12 потоков, 4.7-5.3 ГГц", price: 22990, socket: "AM5", tdp: 105, image: "https://static.nix.ru/images/amd-ryzen-5-7600x-6852443159.jpg?good_id=685244&width=draft&height=draft&view_id=3159" },
-                { id: 6, name: "Intel Core i5-13600K", specs: "14 ядер, 20 потоков, 3.5-5.1 ГГц", price: 27990, socket: "LGA 1700", tdp: 125, image: "https://static.chipdip.ru/lib2/a/824/DOC066824074.jpg" }
-            ],
-            gpu: [
-                { id: 7, name: "NVIDIA GeForce RTX 4090", specs: "24 ГБ GDDR6X, 16384 ядер", price: 159990, power: 450, image: "https://hyperpc.ru/images/catalog/hardware/video-cards/nvidia/rtx-4090/nvidia-geforce-rtx-4090-founder-edition.jpg" },
-                { id: 8, name: "AMD Radeon RX 7900 XTX", specs: "24 ГБ GDDR6, 6144 потоковых процессоров", price: 99990, power: 355, image: "https://the-geek.ru/wp-content/uploads/2022/12/radeon.jpg" },
-                { id: 9, name: "NVIDIA GeForce RTX 4080", specs: "16 ГБ GDDR6X, 9728 ядер", price: 109990, power: 320, image: "https://m.media-amazon.com/images/I/71m9FJCubXL.jpg" },
-                { id: 10, name: "AMD Radeon RX 7900 XT", specs: "20 ГБ GDDR6, 5376 потоковых процессоров", price: 79990, power: 315, image: "https://ir.ozone.ru/s3/multimedia-1-o/c1000/7349590212.jpg" },
-                { id: 11, name: "NVIDIA GeForce RTX 4070 Ti", specs: "12 ГБ GDDR6X, 7680 ядер", price: 79990, power: 285, image: "https://compday.ru/files/cat/388170.png" },
-                { id: 12, name: "AMD Radeon RX 7800 XT", specs: "16 ГБ GDDR6, 3840 потоковых процессоров", price: 59990, power: 263, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOLzdOpNRjDCQ-JrFGR--DvG54tP0-gOw8gw&s" },
-                { id: 13, name: "NVIDIA GeForce RTX 4070", specs: "12 ГБ GDDR6X, 5888 ядер", price: 64990, power: 200, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxUs2lmxwobfByq76iPTpweYOFiDOvyFxwVg&s" },
-                { id: 14, name: "AMD Radeon RX 7700 XT", specs: "12 ГБ GDDR6, 3456 потоковых процессоров", price: 49990, power: 245, image: "https://rating-gpu.ru/wp-content/uploads/2025/08/1089679_0-768x750.jpg" },
-                { id: 15, name: "NVIDIA GeForce RTX 4060 Ti", specs: "8 ГБ GDDR6, 4352 ядра", price: 45990, power: 160, image: "https://4pda.to/s/qirtiLePJyhyKz2DZaRTft5rRZAhf.jpg" },
-                { id: 16, name: "AMD Radeon RX 7600", specs: "8 ГБ GDDR6, 2048 потоковых процессоров", price: 32990, power: 165, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiXj0s4cuKNFx50LqAheqOTEI0o9sgcCvYWg&s" }
-            ],
-            motherboard: [
-                { id: 17, name: "ASUS ROG Crosshair X670E Hero", specs: "AM5, DDR5, PCI-E 5.0", price: 49990, socket: "AM5", formFactor: "ATX", image: "https://dlcdnwebimgs.asus.com/files/media/0CBC145C-59B8-4B51-BF1A-DA0749FA1522/v1/img/spec/connectivity-m.jpg" },
-                { id: 18, name: "Gigabyte Z790 AORUS Master", specs: "LGA 1700, DDR5, PCI-E 5.0", price: 45990, socket: "LGA 1700", formFactor: "ATX", image: "https://www.gigabyte.com/FileUpload/Global/KeyFeature/2182/innergigabyteimages/specsmall01.jpg" },
-                { id: 19, name: "MSI MPG B650 Carbon WiFi", specs: "AM5, DDR5, PCI-E 4.0", price: 28990, socket: "AM5", formFactor: "ATX", image: "https://hyperpc.ru/images/catalog/hardware/motherboards/am5/msi/mpg-b650-carbon/msi-mpg-b650-carbon-wifi.jpg" },
-                { id: 20, name: "ASRock B760 Steel Legend", specs: "LGA 1700, DDR5, PCI-E 4.0", price: 17990, socket: "LGA 1700", formFactor: "ATX", image: "https://microless.com/cdn/products/1572d3a34a9ae7ee0b5c0d8d98188edd-hi.jpg" },
-                { id: 21, name: "ASUS TUF Gaming A620-PLUS", specs: "AM5, DDR5, PCI-E 4.0", price: 14990, socket: "AM5", formFactor: "ATX", image: "https://dlcdnwebimgs.asus.com/files/media/a19882a0-16fd-4030-a678-5ef82f7de6c9/V1/img/gaming/Lighting-Effects.jpg" },
-                { id: 22, name: "Gigabyte B760M DS3H", specs: "LGA 1700, DDR4, PCI-E 4.0", price: 11990, socket: "LGA 1700", formFactor: "Micro-ATX", image: "https://hyperpc.ru/images/catalog/hardware/motherboards/1700/gigabyte/b760m-ds3h-ax/gigabyte-b760m-ds3h.jpg" },
-                { id: 23, name: "ASRock A620M-HDV/M.2", specs: "AM5, DDR5, PCI-E 4.0", price: 10990, socket: "AM5", formFactor: "Micro-ATX", image: "https://s3.e2e4.ru/imgproxy/3186476" },
-                { id: 24, name: "MSI PRO H610M-B", specs: "LGA 1700, DDR4, PCI-E 4.0", price: 8990, socket: "LGA 1700", formFactor: "Micro-ATX", image: "https://asset.msi.com/resize/image/global/product/product_16536355336663fa773655ee25560eff5771f4aa30.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png" }
-            ],
-            ram: [
-                { id: 25, name: "Kingston FURY Beast 32GB", specs: "DDR5 6000MHz, CL32", price: 12990, type: "DDR5", speed: 6000, capacity: 32, image: "https://media.kingston.com/kingston/product/FURY_Beast_RGB_Black_DDR4_1_angle-sm.jpg" },
-                { id: 26, name: "Corsair Vengeance RGB 32GB", specs: "DDR5 5600MHz, CL36", price: 11990, type: "DDR5", speed: 5600, capacity: 32, image: "https://main-cdn.sbermegamarket.ru/big1/hlr-system/-13/294/493/333/241/522/100028286091b0.jpg" },
-                { id: 27, name: "G.Skill Trident Z5 32GB", specs: "DDR5 6400MHz, CL32", price: 14990, type: "DDR5", speed: 6400, capacity: 32, image: "https://m.onlinetrade.ru/img/items/m/operativnaya_pamyat_dimm_g.skill_trident_z5_32gb_2x16gb_ddr5_6000_f5_6000j3040f16gx2_tz5rk__2175253_1.jpg" },
-                { id: 28, name: "Team Group T-Force Delta 32GB", specs: "DDR5 6000MHz, CL38", price: 10990, type: "DDR5", speed: 6000, capacity: 32, image: "https://hyperpc.ru/images/catalog/hardware/memory/teamgroup/t-force-delta-rgb/teamgroup-t-force-delta-rgb-white.jpg" },
-                { id: 29, name: "Crucial Pro 32GB", specs: "DDR5 4800MHz, CL40", price: 8990, type: "DDR5", speed: 4800, capacity: 32, image: "https://m.media-amazon.com/images/I/61EUuA9HiaL._AC_UF894,1000_QL80_.jpg" },
-                { id: 30, name: "Kingston FURY Renegade 64GB", specs: "DDR5 6000MHz, CL32", price: 23990, type: "DDR5", speed: 6000, capacity: 64, image: "https://microless.com/cdn/products/8637f93f7feaafbe9cf44f8a889e9f5e-hi.jpg" },
-                { id: 31, name: "Corsair Dominator Platinum 64GB", specs: "DDR5 5600MHz, CL40", price: 25990, type: "DDR5", speed: 5600, capacity: 64, image: "https://www.dateks.lv/images/pic/2400/2400/850/1218.jpg" },
-                { id: 32, name: "G.Skill Ripjaws S5 16GB", specs: "DDR5 5200MHz, CL40", price: 5990, type: "DDR5", speed: 5200, capacity: 16, image: "https://m.onlinetrade.ru/img/items/m/operativnaya_pamyat_g.skill_ddr5_32gb_2x16gb_6400mhz_pc_51200_ripjaws_s5_cl32_1.4v_f5_6400j3239g16gx2_rs5k__2435851_1.jpg" }
-            ],
-            cooler: [
-                { id: 33, name: "Noctua NH-D15", specs: "Двойной башенный, 140мм вентиляторы", price: 8990, type: "Воздушный", tdp: 220, image: "https://ir.ozone.ru/s3/multimedia-a/c1000/6558500806.jpg" },
-                { id: 34, name: "Corsair iCUE H150i Elite", specs: "360мм СЖО, RGB подсветка", price: 15990, type: "СЖО", tdp: 300, image: "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Custom-Cooling/CW-9060070-WW/-base-elite-capellix-xt-cooler-config-Gallery-H150i-ELITE-CAPELLIX-XT-01.webp" },
-                { id: 35, name: "be quiet! Dark Rock Pro 4", specs: "Двойной башенный, 135мм вентилятор", price: 7990, type: "Воздушный", tdp: 250, image: "https://www.bequiet.com/admin/ImageServer.php?ID=261cba15636@be-quiet.net&rand=e88076a1a06eb3a208cec1a4de0a711c&lang=2&force=true&download=true&omitPreview=true" },
-                { id: 36, name: "ARCTIC Liquid Freezer II 280", specs: "280мм СЖО, PWM вентиляторы", price: 8990, type: "СЖО", tdp: 280, image: "https://3logic.ru/pimg/pim/1000/1052274.jpg" },
-                { id: 37, name: "Cooler Master Hyper 212", specs: "Одиночный башенный, 120мм вентилятор", price: 3490, type: "Воздушный", tdp: 150, image: "https://files.coolermaster.com/og-image/hyper-212-rgb-1200x630.jpg" },
-                { id: 38, name: "NZXT Kraken Z73", specs: "360мм СЖО, LCD дисплей", price: 21990, type: "СЖО", tdp: 350, image: "https://ir.ozone.ru/s3/multimedia-a/c1000/6421321798.jpg" }
-            ],
-            storage: [
-                { id: 39, name: "Samsung 980 Pro 2TB", specs: "NVMe PCIe 4.0, чтение 7000 МБ/с", price: 12990, type: "NVMe", capacity: 2000, speed: 7000, image: "https://microless.com/cdn/products/69a020a04c7642767ac39b8338904a1b-hi.jpg" },
-                { id: 40, name: "WD Black SN850X 2TB", specs: "NVMe PCIe 4.0, чтение 7300 МБ/с", price: 13990, type: "NVMe", capacity: 2000, speed: 7300, image: "https://cdn.kns.ru/linkpics/wd-black-sn850x-2tb-wds200t2xhe-0-v1.jpg" },
-                { id: 41, name: "Crucial P5 Plus 1TB", specs: "NVMe PCIe 4.0, чтение 6600 МБ/с", price: 6990, type: "NVMe", capacity: 1000, speed: 6600, image: "https://assets.micron.com/adobe/assets/urn:aaid:aem:25792bb9-20d6-47b5-9cd3-412b47f9acb7/renditions/transformpng-1024-1024.png/as/crucial-p5-plus-heatsink-ssd-flat-front-image.png" },
-                { id: 42, name: "Samsung 870 EVO 1TB", specs: "SATA III, чтение 560 МБ/с", price: 7990, type: "SATA", capacity: 1000, speed: 560, image: "https://ogo1.ru/upload/iblock/029/hv3470yml1jrkp2rfgsremp2tcx50da2.jpeg" },
-                { id: 43, name: "Seagate FireCuda 530 4TB", specs: "NVMe PCIe 4.0, чтение 7300 МБ/с", price: 29990, type: "NVMe", capacity: 4000, speed: 7300, image: "https://static.insales-cdn.com/images/products/1/4666/537629242/1629808329_IMG_1595987.jpg" },
-                { id: 44, name: "Kingston NV2 2TB", specs: "NVMe PCIe 4.0, чтение 3500 МБ/с", price: 8990, type: "NVMe", capacity: 2000, speed: 3500, image: "https://komtek.net.ru/images/thumbnails/734/600/detailed/179/84910.jpg" },
-                { id: 45, name: "WD Blue SN570 1TB", specs: "NVMe PCIe 3.0, чтение 3500 МБ/с", price: 5990, type: "NVMe", capacity: 1000, speed: 3500, image: "https://www.ixbt.com/img/r30/00/02/55/47/wd-blue-sn570-1tb-big.jpg" },
-                { id: 46, name: "Crucial MX500 2TB", specs: "SATA III, чтение 560 МБ/с", price: 11990, type: "SATA", capacity: 2000, speed: 560, image: "https://www.softmagazin.ru/upload/iblock/06f/06f29e232538b2b02a340ccea4b9709b.jpg" }
-            ],
-            case: [
-                { id: 47, name: "Lian Li O11 Dynamic EVO", specs: "Mid-Tower, стеклянная панель", price: 14990, formFactor: "Mid-Tower", fans: 0, image: "https://s3.e2e4.ru/imgproxy/3485821" },
-                { id: 48, name: "Fractal Design Meshify 2", specs: "Mid-Tower, сетчатая передняя панель", price: 12990, formFactor: "Mid-Tower", fans: 3, image: "https://www.hardwareluxx.de/images/cdn02/uploads/2022/Sep/eased_robotics_qn/fractal_design_meshify_2_compact_rgb_00_1920px.jpg" },
-                { id: 49, name: "Corsair 4000D Airflow", specs: "Mid-Tower, оптимальная вентиляция", price: 8990, formFactor: "Mid-Tower", fans: 2, image: "https://m.media-amazon.com/images/I/81NyR5EERBL._AC_UF894,1000_QL80_.jpg" },
-                { id: 50, name: "NZXT H7 Flow", specs: "Mid-Tower, улучшенное охлаждение", price: 11990, formFactor: "Mid-Tower", fans: 0, image: "https://microless.com/cdn/products/5d809e94728952a18b6aab14bfc2f260-hi.jpg" },
-                { id: 51, name: "be quiet! Silent Base 802", specs: "Mid-Tower, модульная конструкция", price: 13990, formFactor: "Mid-Tower", fans: 3, image: "https://www.bequiet.com/volumes/pim/cases/silentbase/silentbase802window/3d/black/002.jpg" }
-            ],
-            psu: [
-                { id: 52, name: "Corsair RM1000x", specs: "1000W, 80+ Gold, полностью модульный", price: 18990, power: 1000, certification: "80+ Gold", image: "https://s.alicdn.com/@sc04/kf/Ha9ce046e6a6d45f4a6dccb5397354e18E.jpg" },
-                { id: 53, name: "Seasonic Prime TX-1000", specs: "1000W, 80+ Titanium, полностью модульный", price: 24990, power: 1000, certification: "80+ Titanium", image: "https://upweek.ru/wp-content/uploads/2021/07/TX1k_02.jpg" },
-                { id: 54, name: "be quiet! Straight Power 11 850W", specs: "850W, 80+ Platinum, полностью модульный", price: 14990, power: 850, certification: "80+ Platinum", image: "https://www.hardwareluxx.ru/images/cdn01/297124BDEDC746208687EBA388D4350D/img/79362B3AC38244F3BC9A0EB8C1E4C4A5/bequiet_straight_power_11_review_03_79362B3AC38244F3BC9A0EB8C1E4C4A5.jpg" },
-                { id: 55, name: "EVGA SuperNOVA 750 G6", specs: "750W, 80+ Gold, полностью модульный", price: 11990, power: 750, certification: "80+ Gold", image: "https://m.media-amazon.com/images/I/61OM0JzyH8S._UF350,350_QL80_.jpg" },
-                { id: 56, name: "Cooler Master MWE Gold 650", specs: "650W, 80+ Gold, полумодульный", price: 7990, power: 650, certification: "80+ Gold", image: "https://28bit.ru/wa-data/public/shop/products/43/50/25043/images/53017/53017.970.jpeg" }
-            ]
+            cpu: [{
+                id: 1,
+                name: "AMD Ryzen 9 7950X",
+                specs: "16 ядер, 32 потока, 4.5-5.7 ГГц",
+                price: 59990,
+                socket: "AM5",
+                tdp: 170,
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSty7tuxzJewmcSUEOPOgBV4TmLPbzih0LPUA&s"
+            }, {
+                id: 2,
+                name: "Intel Core i9-13900K",
+                specs: "24 ядра, 32 потока, 3.0-5.8 ГГц",
+                price: 54990,
+                socket: "LGA 1700",
+                tdp: 125,
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJcn7eb1JPl9sW87Y3v3vagbdnJYUD509hnw&s"
+            }, {
+                id: 3,
+                name: "AMD Ryzen 7 7700X",
+                specs: "8 ядер, 16 потоков, 4.5-5.4 ГГц",
+                price: 32990,
+                socket: "AM5",
+                tdp: 105,
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv3wRnybrMB7biw74LlrxmLzprx5LUeqnkHQ&s"
+            }, {
+                id: 4,
+                name: "Intel Core i7-13700K",
+                specs: "16 ядер, 24 потока, 3.4-5.4 ГГц",
+                price: 38990,
+                socket: "LGA 1700",
+                tdp: 125,
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrNza2wQWq14AF_YAtB3UtypEO7ziTk-n1EQ&s"
+            }, {
+                id: 5,
+                name: "AMD Ryzen 5 7600X",
+                specs: "6 ядер, 12 потоков, 4.7-5.3 ГГц",
+                price: 22990,
+                socket: "AM5",
+                tdp: 105,
+                image: "https://static.nix.ru/images/amd-ryzen-5-7600x-6852443159.jpg?good_id=685244&width=draft&height=draft&view_id=3159"
+            }, {
+                id: 6,
+                name: "Intel Core i5-13600K",
+                specs: "14 ядер, 20 потоков, 3.5-5.1 ГГц",
+                price: 27990,
+                socket: "LGA 1700",
+                tdp: 125,
+                image: "https://static.chipdip.ru/lib2/a/824/DOC066824074.jpg"
+            }],
+            gpu: [{
+                id: 7,
+                name: "NVIDIA GeForce RTX 4090",
+                specs: "24 ГБ GDDR6X, 16384 ядер",
+                price: 159990,
+                power: 450,
+                image: "https://hyperpc.ru/images/catalog/hardware/video-cards/nvidia/rtx-4090/nvidia-geforce-rtx-4090-founder-edition.jpg"
+            }, {
+                id: 8,
+                name: "AMD Radeon RX 7900 XTX",
+                specs: "24 ГБ GDDR6, 6144 потоковых процессоров",
+                price: 99990,
+                power: 355,
+                image: "https://the-geek.ru/wp-content/uploads/2022/12/radeon.jpg"
+            }, {
+                id: 9,
+                name: "NVIDIA GeForce RTX 4080",
+                specs: "16 ГБ GDDR6X, 9728 ядер",
+                price: 109990,
+                power: 320,
+                image: "https://m.media-amazon.com/images/I/71m9FJCubXL.jpg"
+            }, {
+                id: 10,
+                name: "AMD Radeon RX 7900 XT",
+                specs: "20 ГБ GDDR6, 5376 потоковых процессоров",
+                price: 79990,
+                power: 315,
+                image: "https://ir.ozone.ru/s3/multimedia-1-o/c1000/7349590212.jpg"
+            }, {
+                id: 11,
+                name: "NVIDIA GeForce RTX 4070 Ti",
+                specs: "12 ГБ GDDR6X, 7680 ядер",
+                price: 79990,
+                power: 285,
+                image: "https://compday.ru/files/cat/388170.png"
+            }, {
+                id: 12,
+                name: "AMD Radeon RX 7800 XT",
+                specs: "16 ГБ GDDR6, 3840 потоковых процессоров",
+                price: 59990,
+                power: 263,
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOLzdOpNRjDCQ-JrFGR--DvG54tP0-gOw8gw&s"
+            }, {
+                id: 13,
+                name: "NVIDIA GeForce RTX 4070",
+                specs: "12 ГБ GDDR6X, 5888 ядер",
+                price: 64990,
+                power: 200,
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxUs2lmxwobfByq76iPTpweYOFiDOvyFxwVg&s"
+            }, {
+                id: 14,
+                name: "AMD Radeon RX 7700 XT",
+                specs: "12 ГБ GDDR6, 3456 потоковых процессоров",
+                price: 49990,
+                power: 245,
+                image: "https://rating-gpu.ru/wp-content/uploads/2025/08/1089679_0-768x750.jpg"
+            }, {
+                id: 15,
+                name: "NVIDIA GeForce RTX 4060 Ti",
+                specs: "8 ГБ GDDR6, 4352 ядра",
+                price: 45990,
+                power: 160,
+                image: "https://4pda.to/s/qirtiLePJyhyKz2DZaRTft5rRZAhf.jpg"
+            }, {
+                id: 16,
+                name: "AMD Radeon RX 7600",
+                specs: "8 ГБ GDDR6, 2048 потоковых процессоров",
+                price: 32990,
+                power: 165,
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiXj0s4cuKNFx50LqAheqOTEI0o9sgcCvYWg&s"
+            }],
+            motherboard: [{
+                id: 17,
+                name: "ASUS ROG Crosshair X670E Hero",
+                specs: "AM5, DDR5, PCI-E 5.0",
+                price: 49990,
+                socket: "AM5",
+                formFactor: "ATX",
+                image: "https://dlcdnwebimgs.asus.com/files/media/0CBC145C-59B8-4B51-BF1A-DA0749FA1522/v1/img/spec/connectivity-m.jpg"
+            }, {
+                id: 18,
+                name: "Gigabyte Z790 AORUS Master",
+                specs: "LGA 1700, DDR5, PCI-E 5.0",
+                price: 45990,
+                socket: "LGA 1700",
+                formFactor: "ATX",
+                image: "https://www.gigabyte.com/FileUpload/Global/KeyFeature/2182/innergigabyteimages/specsmall01.jpg"
+            }, {
+                id: 19,
+                name: "MSI MPG B650 Carbon WiFi",
+                specs: "AM5, DDR5, PCI-E 4.0",
+                price: 28990,
+                socket: "AM5",
+                formFactor: "ATX",
+                image: "https://hyperpc.ru/images/catalog/hardware/motherboards/am5/msi/mpg-b650-carbon/msi-mpg-b650-carbon-wifi.jpg"
+            }, {
+                id: 20,
+                name: "ASRock B760 Steel Legend",
+                specs: "LGA 1700, DDR5, PCI-E 4.0",
+                price: 17990,
+                socket: "LGA 1700",
+                formFactor: "ATX",
+                image: "https://microless.com/cdn/products/1572d3a34a9ae7ee0b5c0d8d98188edd-hi.jpg"
+            }, {
+                id: 21,
+                name: "ASUS TUF Gaming A620-PLUS",
+                specs: "AM5, DDR5, PCI-E 4.0",
+                price: 14990,
+                socket: "AM5",
+                formFactor: "ATX",
+                image: "https://dlcdnwebimgs.asus.com/files/media/a19882a0-16fd-4030-a678-5ef82f7de6c9/V1/img/gaming/Lighting-Effects.jpg"
+            }, {
+                id: 22,
+                name: "Gigabyte B760M DS3H",
+                specs: "LGA 1700, DDR4, PCI-E 4.0",
+                price: 11990,
+                socket: "LGA 1700",
+                formFactor: "Micro-ATX",
+                image: "https://hyperpc.ru/images/catalog/hardware/motherboards/1700/gigabyte/b760m-ds3h-ax/gigabyte-b760m-ds3h.jpg"
+            }, {
+                id: 23,
+                name: "ASRock A620M-HDV/M.2",
+                specs: "AM5, DDR5, PCI-E 4.0",
+                price: 10990,
+                socket: "AM5",
+                formFactor: "Micro-ATX",
+                image: "https://s3.e2e4.ru/imgproxy/3186476"
+            }, {
+                id: 24,
+                name: "MSI PRO H610M-B",
+                specs: "LGA 1700, DDR4, PCI-E 4.0",
+                price: 8990,
+                socket: "LGA 1700",
+                formFactor: "Micro-ATX",
+                image: "https://asset.msi.com/resize/image/global/product/product_16536355336663fa773655ee25560eff5771f4aa30.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
+            }],
+            ram: [{
+                id: 25,
+                name: "Kingston FURY Beast 32GB",
+                specs: "DDR5 6000MHz, CL32",
+                price: 12990,
+                type: "DDR5",
+                speed: 6000,
+                capacity: 32,
+                image: "https://media.kingston.com/kingston/product/FURY_Beast_RGB_Black_DDR4_1_angle-sm.jpg"
+            }, {
+                id: 26,
+                name: "Corsair Vengeance RGB 32GB",
+                specs: "DDR5 5600MHz, CL36",
+                price: 11990,
+                type: "DDR5",
+                speed: 5600,
+                capacity: 32,
+                image: "https://main-cdn.sbermegamarket.ru/big1/hlr-system/-13/294/493/333/241/522/100028286091b0.jpg"
+            }, {
+                id: 27,
+                name: "G.Skill Trident Z5 32GB",
+                specs: "DDR5 6400MHz, CL32",
+                price: 14990,
+                type: "DDR5",
+                speed: 6400,
+                capacity: 32,
+                image: "https://m.onlinetrade.ru/img/items/m/operativnaya_pamyat_dimm_g.skill_trident_z5_32gb_2x16gb_ddr5_6000_f5_6000j3040f16gx2_tz5rk__2175253_1.jpg"
+            }, {
+                id: 28,
+                name: "Team Group T-Force Delta 32GB",
+                specs: "DDR5 6000MHz, CL38",
+                price: 10990,
+                type: "DDR5",
+                speed: 6000,
+                capacity: 32,
+                image: "https://hyperpc.ru/images/catalog/hardware/memory/teamgroup/t-force-delta-rgb/teamgroup-t-force-delta-rgb-white.jpg"
+            }, {
+                id: 29,
+                name: "Crucial Pro 32GB",
+                specs: "DDR5 4800MHz, CL40",
+                price: 8990,
+                type: "DDR5",
+                speed: 4800,
+                capacity: 32,
+                image: "https://m.media-amazon.com/images/I/61EUuA9HiaL._AC_UF894,1000_QL80_.jpg"
+            }, {
+                id: 30,
+                name: "Kingston FURY Renegade 64GB",
+                specs: "DDR5 6000MHz, CL32",
+                price: 23990,
+                type: "DDR5",
+                speed: 6000,
+                capacity: 64,
+                image: "https://microless.com/cdn/products/8637f93f7feaafbe9cf44f8a889e9f5e-hi.jpg"
+            }, {
+                id: 31,
+                name: "Corsair Dominator Platinum 64GB",
+                specs: "DDR5 5600MHz, CL40",
+                price: 25990,
+                type: "DDR5",
+                speed: 5600,
+                capacity: 64,
+                image: "https://www.dateks.lv/images/pic/2400/2400/850/1218.jpg"
+            }, {
+                id: 32,
+                name: "G.Skill Ripjaws S5 16GB",
+                specs: "DDR5 5200MHz, CL40",
+                price: 5990,
+                type: "DDR5",
+                speed: 5200,
+                capacity: 16,
+                image: "https://m.onlinetrade.ru/img/items/m/operativnaya_pamyat_g.skill_ddr5_32gb_2x16gb_6400mhz_pc_51200_ripjaws_s5_cl32_1.4v_f5_6400j3239g16gx2_rs5k__2435851_1.jpg"
+            }],
+            cooler: [{
+                id: 33,
+                name: "Noctua NH-D15",
+                specs: "Двойной башенный, 140мм вентиляторы",
+                price: 8990,
+                type: "Воздушный",
+                tdp: 220,
+                image: "https://ir.ozone.ru/s3/multimedia-a/c1000/6558500806.jpg"
+            }, {
+                id: 34,
+                name: "Corsair iCUE H150i Elite",
+                specs: "360мм СЖО, RGB подсветка",
+                price: 15990,
+                type: "СЖО",
+                tdp: 300,
+                image: "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Custom-Cooling/CW-9060070-WW/-base-elite-capellix-xt-cooler-config-Gallery-H150i-ELITE-CAPELLIX-XT-01.webp"
+            }, {
+                id: 35,
+                name: "be quiet! Dark Rock Pro 4",
+                specs: "Двойной башенный, 135мм вентилятор",
+                price: 7990,
+                type: "Воздушный",
+                tdp: 250,
+                image: "https://www.bequiet.com/admin/ImageServer.php?ID=261cba15636@be-quiet.net&rand=e88076a1a06eb3a208cec1a4de0a711c&lang=2&force=true&download=true&omitPreview=true"
+            }, {
+                id: 36,
+                name: "ARCTIC Liquid Freezer II 280",
+                specs: "280мм СЖО, PWM вентиляторы",
+                price: 8990,
+                type: "СЖО",
+                tdp: 280,
+                image: "https://3logic.ru/pimg/pim/1000/1052274.jpg"
+            }, {
+                id: 37,
+                name: "Cooler Master Hyper 212",
+                specs: "Одиночный башенный, 120мм вентилятор",
+                price: 3490,
+                type: "Воздушный",
+                tdp: 150,
+                image: "https://files.coolermaster.com/og-image/hyper-212-rgb-1200x630.jpg"
+            }, {
+                id: 38,
+                name: "NZXT Kraken Z73",
+                specs: "360мм СЖО, LCD дисплей",
+                price: 21990,
+                type: "СЖО",
+                tdp: 350,
+                image: "https://ir.ozone.ru/s3/multimedia-a/c1000/6421321798.jpg"
+            }],
+            storage: [{
+                id: 39,
+                name: "Samsung 980 Pro 2TB",
+                specs: "NVMe PCIe 4.0, чтение 7000 МБ/с",
+                price: 12990,
+                type: "NVMe",
+                capacity: 2000,
+                speed: 7000,
+                image: "https://microless.com/cdn/products/69a020a04c7642767ac39b8338904a1b-hi.jpg"
+            }, {
+                id: 40,
+                name: "WD Black SN850X 2TB",
+                specs: "NVMe PCIe 4.0, чтение 7300 МБ/с",
+                price: 13990,
+                type: "NVMe",
+                capacity: 2000,
+                speed: 7300,
+                image: "https://cdn.kns.ru/linkpics/wd-black-sn850x-2tb-wds200t2xhe-0-v1.jpg"
+            }, {
+                id: 41,
+                name: "Crucial P5 Plus 1TB",
+                specs: "NVMe PCIe 4.0, чтение 6600 МБ/с",
+                price: 6990,
+                type: "NVMe",
+                capacity: 1000,
+                speed: 6600,
+                image: "https://assets.micron.com/adobe/assets/urn:aaid:aem:25792bb9-20d6-47b5-9cd3-412b47f9acb7/renditions/transformpng-1024-1024.png/as/crucial-p5-plus-heatsink-ssd-flat-front-image.png"
+            }, {
+                id: 42,
+                name: "Samsung 870 EVO 1TB",
+                specs: "SATA III, чтение 560 МБ/с",
+                price: 7990,
+                type: "SATA",
+                capacity: 1000,
+                speed: 560,
+                image: "https://ogo1.ru/upload/iblock/029/hv3470yml1jrkp2rfgsremp2tcx50da2.jpeg"
+            }, {
+                id: 43,
+                name: "Seagate FireCuda 530 4TB",
+                specs: "NVMe PCIe 4.0, чтение 7300 МБ/с",
+                price: 29990,
+                type: "NVMe",
+                capacity: 4000,
+                speed: 7300,
+                image: "https://static.insales-cdn.com/images/products/1/4666/537629242/1629808329_IMG_1595987.jpg"
+            }, {
+                id: 44,
+                name: "Kingston NV2 2TB",
+                specs: "NVMe PCIe 4.0, чтение 3500 МБ/с",
+                price: 8990,
+                type: "NVMe",
+                capacity: 2000,
+                speed: 3500,
+                image: "https://komtek.net.ru/images/thumbnails/734/600/detailed/179/84910.jpg"
+            }, {
+                id: 45,
+                name: "WD Blue SN570 1TB",
+                specs: "NVMe PCIe 3.0, чтение 3500 МБ/с",
+                price: 5990,
+                type: "NVMe",
+                capacity: 1000,
+                speed: 3500,
+                image: "https://www.ixbt.com/img/r30/00/02/55/47/wd-blue-sn570-1tb-big.jpg"
+            }, {
+                id: 46,
+                name: "Crucial MX500 2TB",
+                specs: "SATA III, чтение 560 МБ/с",
+                price: 11990,
+                type: "SATA",
+                capacity: 2000,
+                speed: 560,
+                image: "https://www.softmagazin.ru/upload/iblock/06f/06f29e232538b2b02a340ccea4b9709b.jpg"
+            }],
+            case: [{
+                id: 47,
+                name: "Lian Li O11 Dynamic EVO",
+                specs: "Mid-Tower, стеклянная панель",
+                price: 14990,
+                formFactor: "Mid-Tower",
+                fans: 0,
+                image: "https://s3.e2e4.ru/imgproxy/3485821"
+            }, {
+                id: 48,
+                name: "Fractal Design Meshify 2",
+                specs: "Mid-Tower, сетчатая передняя панель",
+                price: 12990,
+                formFactor: "Mid-Tower",
+                fans: 3,
+                image: "https://www.hardwareluxx.de/images/cdn02/uploads/2022/Sep/eased_robotics_qn/fractal_design_meshify_2_compact_rgb_00_1920px.jpg"
+            }, {
+                id: 49,
+                name: "Corsair 4000D Airflow",
+                specs: "Mid-Tower, оптимальная вентиляция",
+                price: 8990,
+                formFactor: "Mid-Tower",
+                fans: 2,
+                image: "https://m.media-amazon.com/images/I/81NyR5EERBL._AC_UF894,1000_QL80_.jpg"
+            }, {
+                id: 50,
+                name: "NZXT H7 Flow",
+                specs: "Mid-Tower, улучшенное охлаждение",
+                price: 11990,
+                formFactor: "Mid-Tower",
+                fans: 0,
+                image: "https://microless.com/cdn/products/5d809e94728952a18b6aab14bfc2f260-hi.jpg"
+            }, {
+                id: 51,
+                name: "be quiet! Silent Base 802",
+                specs: "Mid-Tower, модульная конструкция",
+                price: 13990,
+                formFactor: "Mid-Tower",
+                fans: 3,
+                image: "https://www.bequiet.com/volumes/pim/cases/silentbase/silentbase802window/3d/black/002.jpg"
+            }],
+            psu: [{
+                id: 52,
+                name: "Corsair RM1000x",
+                specs: "1000W, 80+ Gold, полностью модульный",
+                price: 18990,
+                power: 1000,
+                certification: "80+ Gold",
+                image: "https://s.alicdn.com/@sc04/kf/Ha9ce046e6a6d45f4a6dccb5397354e18E.jpg"
+            }, {
+                id: 53,
+                name: "Seasonic Prime TX-1000",
+                specs: "1000W, 80+ Titanium, полностью модульный",
+                price: 24990,
+                power: 1000,
+                certification: "80+ Titanium",
+                image: "https://upweek.ru/wp-content/uploads/2021/07/TX1k_02.jpg"
+            }, {
+                id: 54,
+                name: "be quiet! Straight Power 11 850W",
+                specs: "850W, 80+ Platinum, полностью модульный",
+                price: 14990,
+                power: 850,
+                certification: "80+ Platinum",
+                image: "https://www.hardwareluxx.ru/images/cdn01/297124BDEDC746208687EBA388D4350D/img/79362B3AC38244F3BC9A0EB8C1E4C4A5/bequiet_straight_power_11_review_03_79362B3AC38244F3BC9A0EB8C1E4C4A5.jpg"
+            }, {
+                id: 55,
+                name: "EVGA SuperNOVA 750 G6",
+                specs: "750W, 80+ Gold, полностью модульный",
+                price: 11990,
+                power: 750,
+                certification: "80+ Gold",
+                image: "https://m.media-amazon.com/images/I/61OM0JzyH8S._UF350,350_QL80_.jpg"
+            }, {
+                id: 56,
+                name: "Cooler Master MWE Gold 650",
+                specs: "650W, 80+ Gold, полумодульный",
+                price: 7990,
+                power: 650,
+                certification: "80+ Gold",
+                image: "https://28bit.ru/wa-data/public/shop/products/43/50/25043/images/53017/53017.970.jpeg"
+            }]
         };
 
         let currentBuild = {
-            cpu: null, gpu: null, motherboard: null, ram: null,
-            cooler: null, storage: null, case: null, psu: null
+            cpu: null,
+            gpu: null,
+            motherboard: null,
+            ram: null,
+            cooler: null,
+            storage: null,
+            case: null,
+            psu: null
         };
 
         let compareList = [];
@@ -985,30 +1389,30 @@
         function updateCompatibilityCheck() {
             const compatibilityElement = document.querySelector('.compatibility-check');
             if (!compatibilityElement) return;
-            
+
             const statusElement = compatibilityElement.querySelector('.compatibility-status');
             const detailsElement = compatibilityElement.querySelector('.compatibility-details');
-            
+
             if (!statusElement || !detailsElement) return;
-            
+
             let issues = [];
             let warnings = [];
-            
+
             // Проверяем наличие всех необходимых компонентов
             const requiredComponents = ['cpu', 'motherboard', 'ram', 'psu'];
             const missingComponents = requiredComponents.filter(comp => !currentBuild[comp]);
-            
+
             if (missingComponents.length > 0) {
                 issues.push(`Отсутствуют: ${missingComponents.map(comp => getComponentName(comp)).join(', ')}`);
             }
-            
+
             // Проверяем совместимость процессора и материнской платы
             if (currentBuild.cpu && currentBuild.motherboard) {
                 if (currentBuild.cpu.socket !== currentBuild.motherboard.socket) {
                     issues.push(`Процессор (${currentBuild.cpu.socket}) не совместим с материнской платой (${currentBuild.motherboard.socket})`);
                 }
             }
-            
+
             // Проверяем совместимость оперативной памяти и материнской платы
             if (currentBuild.ram && currentBuild.motherboard) {
                 // Все современные материнские платы поддерживают DDR5
@@ -1016,55 +1420,55 @@
                     warnings.push(`Рекомендуется DDR5 память для лучшей совместимости`);
                 }
             }
-            
+
             // Проверяем мощность блока питания
             if (currentBuild.psu) {
                 let totalPower = 0;
-                
+
                 if (currentBuild.cpu) totalPower += currentBuild.cpu.tdp || 100;
                 if (currentBuild.gpu) totalPower += currentBuild.gpu.power || 200;
                 if (currentBuild.ram) totalPower += 30;
                 if (currentBuild.storage) totalPower += 20;
                 if (currentBuild.cooler) totalPower += 10;
-                
+
                 // Добавляем запас 20%
                 totalPower = totalPower * 1.2;
-                
+
                 if (currentBuild.psu.power < totalPower) {
                     issues.push(`Блок питания (${currentBuild.psu.power}W) может быть недостаточно мощным для системы (рекомендуется ${Math.ceil(totalPower)}W)`);
                 } else if (currentBuild.psu.power < totalPower * 1.5) {
                     warnings.push(`Блок питания работает на пределе. Рекомендуется запас 30-50%`);
                 }
             }
-            
+
             // Проверяем совместимость кулера и процессора
             if (currentBuild.cooler && currentBuild.cpu) {
                 if (currentBuild.cooler.tdp < currentBuild.cpu.tdp) {
                     warnings.push(`Кулер (${currentBuild.cooler.tdp}W TDP) может не справиться с процессором (${currentBuild.cpu.tdp}W TDP)`);
                 }
             }
-            
+
             // Проверяем совместимость корпуса и компонентов
             if (currentBuild.case && currentBuild.motherboard) {
                 const caseFormFactor = currentBuild.case.formFactor;
                 const motherboardFormFactor = currentBuild.motherboard.formFactor;
-                
+
                 const formFactorHierarchy = {
                     'Mini-ITX': ['Mini-ITX'],
                     'Micro-ATX': ['Mini-ITX', 'Micro-ATX'],
                     'ATX': ['Mini-ITX', 'Micro-ATX', 'ATX'],
                     'E-ATX': ['Mini-ITX', 'Micro-ATX', 'ATX', 'E-ATX']
                 };
-                
-                if (!formFactorHierarchy[caseFormFactor]?.includes(motherboardFormFactor)) {
+
+                if (!formFactorHierarchy[caseFormFactor] || !formFactorHierarchy[caseFormFactor].includes(motherboardFormFactor)) {
                     warnings.push(`Проверьте совместимость форм-факторов: корпус ${caseFormFactor}, мат. плата ${motherboardFormFactor}`);
                 }
             }
-            
+
             // Обновляем отображение статуса совместимости
             const statusIcon = statusElement.querySelector('.status-icon');
             const statusText = statusElement.querySelector('div:last-child');
-            
+
             if (issues.length === 0 && warnings.length === 0 && missingComponents.length === 0) {
                 statusIcon.innerHTML = '✅';
                 statusIcon.className = 'status-icon status-success';
@@ -1108,13 +1512,18 @@
 
         // НОВЫЕ ФУНКЦИИ ДЛЯ УЛУЧШЕНИЙ
         function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
 
         function scrollToComponents() {
             const componentsSection = document.getElementById('components');
             if (componentsSection) {
-                componentsSection.scrollIntoView({ behavior: 'smooth' });
+                componentsSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
             }
         }
 
@@ -1124,7 +1533,7 @@
             if (tooltip && tooltipText) {
                 tooltipText.textContent = message;
                 tooltip.classList.add('show');
-                
+
                 setTimeout(() => {
                     tooltip.classList.remove('show');
                 }, 5000);
@@ -1134,7 +1543,7 @@
         function updateProgressIndicator() {
             const steps = ['cpu', 'motherboard', 'ram', 'gpu', 'storage'];
             let foundActive = false;
-            
+
             steps.forEach(step => {
                 const element = document.getElementById(`step-${step}`);
                 if (element) {
@@ -1155,7 +1564,7 @@
         function updateQuickTips() {
             const tipText = document.getElementById('quick-tip-text');
             if (!tipText) return;
-            
+
             const tips = [
                 "💡 Начните с выбора процессора - это основа вашей системы!",
                 "💡 Убедитесь, что сокет процессора совместим с материнской платой",
@@ -1164,9 +1573,9 @@
                 "💡 Проверьте совместимость оперативной памяти с материнской платой",
                 "💡 Учитывайте габариты компонентов при выборе корпуса"
             ];
-            
+
             let currentTipIndex = 0;
-            
+
             // Меняем подсказку каждые 8 секунд
             setInterval(() => {
                 tipText.textContent = tips[currentTipIndex];
@@ -1177,18 +1586,18 @@
         function simulateSave() {
             const saveBtn = document.getElementById('save-build-btn');
             const saveText = document.getElementById('save-btn-text');
-            
+
             if (!saveBtn || !saveText) return;
-            
+
             // Показываем индикатор загрузки
             saveText.innerHTML = '<div class="loading-spinner"></div> Сохранение...';
             saveBtn.disabled = true;
-            
+
             // Имитируем сохранение
             setTimeout(() => {
                 saveText.innerHTML = '<span class="success-checkmark">✓</span> Сборка сохранена!';
                 showFloatingTooltip('✅ Сборка успешно сохранена! Вы можете вернуться к ней позже.');
-                
+
                 // Возвращаем обычное состояние через 3 секунды
                 setTimeout(() => {
                     saveText.textContent = 'Сохранить сборку';
@@ -1201,11 +1610,11 @@
         function displayComponents(category = 'all') {
             const container = document.getElementById('components-container');
             if (!container) return;
-            
+
             container.innerHTML = '';
-            
+
             let componentsToShow = [];
-            
+
             if (category === 'all') {
                 for (const key in componentsDB) {
                     componentsToShow = componentsToShow.concat(componentsDB[key]);
@@ -1213,15 +1622,15 @@
             } else {
                 componentsToShow = componentsDB[category] || [];
             }
-            
+
             componentsToShow.forEach(component => {
-                const categoryName = getCategoryById(component.id);
-                const card = document.createElement('div');
-                card.className = 'component-card';
-                card.dataset.id = component.id;
-                card.dataset.category = categoryName;
-                
-                card.innerHTML = `
+                        const categoryName = getCategoryById(component.id);
+                        const card = document.createElement('div');
+                        card.className = 'component-card';
+                        card.dataset.id = component.id;
+                        card.dataset.category = categoryName;
+
+                        card.innerHTML = `
                     <div class="card-image">
                         ${component.image ? `<img src="${component.image}" alt="${component.name}" loading="lazy">` : `<i>${getCategoryIcon(categoryName)}</i>`}
                     </div>
@@ -1235,7 +1644,7 @@
                         </div>
                     </div>
                 `;
-                
+
                 container.appendChild(card);
             });
         }
@@ -1254,14 +1663,14 @@
         function addToBuild(id) {
             const component = findComponentById(id);
             const category = getCategoryById(id);
-            
+
             if (component && category) {
                 currentBuild[category] = component;
                 updateBuildDisplay();
                 updateTotalCost();
                 updateProgressIndicator();
                 updateCompatibilityCheck(); // ВЫЗОВ ПРОВЕРКИ СОВМЕСТИМОСТИ
-                
+
                 showFloatingTooltip(`✅ ${component.name} добавлен в сборку!`);
             }
         }
@@ -1273,7 +1682,7 @@
             updateTotalCost();
             updateProgressIndicator();
             updateCompatibilityCheck(); // ВЫЗОВ ПРОВЕРКИ СОВМЕСТИМОСТИ
-            
+
             if (componentName) {
                 showFloatingTooltip(`🗑️ ${componentName} удален из сборки`);
             }
@@ -1281,7 +1690,7 @@
 
         function addToCompare(id) {
             const component = findComponentById(id);
-            
+
             if (component && !compareList.find(item => item.id === id)) {
                 compareList.push(component);
                 updateCompareDisplay();
@@ -1299,18 +1708,18 @@
         function updateBuildDisplay() {
             const buildList = document.getElementById('build-list');
             if (!buildList) return;
-            
+
             buildList.innerHTML = '';
-            
+
             let hasComponents = false;
-            
+
             for (const category in currentBuild) {
                 if (currentBuild[category]) {
                     hasComponents = true;
                     const component = currentBuild[category];
                     const item = document.createElement('div');
                     item.className = 'build-item';
-                    
+
                     item.innerHTML = `
                         <div class="build-item-icon">${getCategoryIcon(category)}</div>
                         <div class="build-item-info">
@@ -1320,11 +1729,11 @@
                         <div class="build-item-price">${component.price.toLocaleString()} ₽</div>
                         <button class="remove-btn" onclick="removeFromBuild('${category}')">✕</button>
                     `;
-                    
+
                     buildList.appendChild(item);
                 }
             }
-            
+
             if (!hasComponents) {
                 buildList.innerHTML = `
                     <div class="empty-build-message">
@@ -1339,16 +1748,16 @@
 
         function updateTotalCost() {
             let total = 0;
-            
+
             for (const category in currentBuild) {
                 if (currentBuild[category]) {
                     total += currentBuild[category].price;
                 }
             }
-            
+
             const componentsCost = document.getElementById('components-cost');
             const totalCost = document.getElementById('total-cost');
-            
+
             if (componentsCost) componentsCost.textContent = total.toLocaleString() + ' ₽';
             if (totalCost) totalCost.textContent = total.toLocaleString() + ' ₽';
         }
@@ -1356,23 +1765,23 @@
         function updateCompareDisplay() {
             const compareListContainer = document.getElementById('compare-list');
             const compareBtn = document.getElementById('compare-btn');
-            
+
             if (!compareListContainer) return;
-            
+
             compareListContainer.innerHTML = '';
-            
+
             if (compareList.length > 0) {
                 if (compareBtn) compareBtn.style.display = 'block';
-                
+
                 compareList.forEach(component => {
                     const item = document.createElement('div');
                     item.className = 'compare-item';
-                    
+
                     item.innerHTML = `
                         <span>${component.name}</span>
                         <button class="remove-compare" onclick="removeFromCompare(${component.id})">✕</button>
                     `;
-                    
+
                     compareListContainer.appendChild(item);
                 });
             } else {
@@ -1408,82 +1817,124 @@
         function performComparison() {
             const resultsContainer = document.getElementById('compare-results');
             if (!resultsContainer) return;
-            
+
             resultsContainer.innerHTML = '';
-            
+
             if (compareList.length < 2) {
                 resultsContainer.innerHTML = '<p>Выберите как минимум 2 компонента для сравнения</p>';
                 return;
             }
-            
+
             const table = document.createElement('table');
             table.className = 'compare-table';
-            
+
             const headerRow = document.createElement('tr');
             headerRow.innerHTML = '<th>Характеристика</th>';
-            
+
             compareList.forEach(component => {
                 headerRow.innerHTML += `<th>${component.name}</th>`;
             });
-            
+
             table.appendChild(headerRow);
-            
+
             const priceRow = document.createElement('tr');
             priceRow.innerHTML = '<td>Цена</td>';
-            
+
             compareList.forEach(component => {
                 priceRow.innerHTML += `<td>${component.price.toLocaleString()} ₽</td>`;
             });
-            
+
             table.appendChild(priceRow);
-            
+
             const specsRow = document.createElement('tr');
             specsRow.innerHTML = '<td>Характеристики</td>';
-            
+
             compareList.forEach(component => {
                 specsRow.innerHTML += `<td>${component.specs}</td>`;
             });
-            
+
             table.appendChild(specsRow);
-            
+
             resultsContainer.appendChild(table);
         }
 
         // ИНИЦИАЛИЗАЦИЯ
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             displayComponents();
             updateQuickTips();
             updateProgressIndicator();
             updateCompatibilityCheck(); // ПЕРВОНАЧАЛЬНАЯ ПРОВЕРКА
-            
+
             const categoryTabs = document.querySelectorAll('.category-tab');
             categoryTabs.forEach(tab => {
-                tab.addEventListener('click', function() {
+                tab.addEventListener('click', function () {
                     categoryTabs.forEach(t => t.classList.remove('active'));
                     this.classList.add('active');
                     displayComponents(this.dataset.category);
                 });
             });
-            
+
             const compareBtn = document.getElementById('compare-btn');
             if (compareBtn) {
-                compareBtn.addEventListener('click', function() {
+                compareBtn.addEventListener('click', function () {
                     if (compareList.length > 1) {
                         performComparison();
                     }
                 });
             }
-            
+
             const saveBtn = document.getElementById('save-build-btn');
             if (saveBtn) {
                 saveBtn.addEventListener('click', simulateSave);
             }
-            
+
             // Показываем первую подсказку через 3 секунды
             setTimeout(() => {
                 showFloatingTooltip('👋 Добро пожаловать! Используйте фильтры для быстрого поиска компонентов');
             }, 3000);
         });
+
+        // УПРАВЛЕНИЕ АКТИВНОЙ ССЫЛКОЙ В НАВИГАЦИИ
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Убираем active со всех ссылок
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+
+                // Добавляем active к текущей ссылке
+                this.classList.add('active');
+
+                // Скроллим к секции
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Также обновляем активную ссылку при скроллинге
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-section') === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
+
 </html>
